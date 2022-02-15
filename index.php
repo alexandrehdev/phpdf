@@ -3,5 +3,6 @@
 	use MyApp\View\Route;
 
 	Route::getPage("main");
+	
 
  ?>

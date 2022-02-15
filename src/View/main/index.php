@@ -1,3 +1,13 @@
+<?php 
+require_once("../../../vendor/autoload.php");
+use MyApp\Controller\Archive;
+use MyApp\Controller\GetData;
+
+
+if (isset($_POST['btn'])) {
+	echo "asd";
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,10 +29,23 @@
 			<span>Sobre</span>
 		</div>
 	</header>
-<main>
-	<form>
-		
-	</form>
-</main>
+	<main>
+		<div class="content-title">
+			<h1>Crie seu PDF</h1>
+		</div>
+		<form method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">
+			<div>
+				<label>Titulo</label>
+				<input type="" name="" name="title" placeholder="Título">
+			</div>
+			<div>
+				<label>Texto</label>
+				<textarea name="body-text"></textarea>
+			</div>
+			<div>
+				<input type="submit" name="btn" value="Gerar Arquivo">
+			</div>
+		</form>
+	</main>
 </body>
 </html>
