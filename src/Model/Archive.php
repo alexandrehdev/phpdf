@@ -1,23 +1,27 @@
-<?php 
+<?php
 namespace MyApp\Model;
-use FPDF;
+use MyApp\Controller\Archive as ArchiveController;
+use Fpdf\Fpdf;
 
-class Archive
+class Archive extends ArchiveController
 {
 	public $pdf;
 
 	function __construct()
 	{
-		$this->pdf = new FPDF();
+		parent::__construct();
+
+		$this->pdf = new Fpdf();
 	}
 
 	public function generatePDF(){
 		$this->pdf->AddPage();
 		$this->pdf->SetFont('Arial','B',16);
-		$this->pdf->Cell(40,10,'Hello World!');
+		$this->pdf->Cell(40,10, $this->getTitle());
+		$this->pdf->Cell(10,30, $this->getContent());
 		$this->pdf->Output();
 	}
-	
+
 }
 
 ?>

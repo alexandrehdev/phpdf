@@ -1,11 +1,10 @@
 {
-    "require": {
-        "fpdf/fpdf": "^1.83",
-        "phpmailer/phpmailer": "^6.5"
-    },
     "autoload":{
         "psr-4":{
             "MyApp\\": "src/"
         }
+    },
+    "require": {
+        "fpdf/fpdf": "^1.83"
     }
 }
