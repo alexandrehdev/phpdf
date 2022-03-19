@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace MyApp\Controller;
 use MyApp\Model\Archive as ArchiveModel;
 

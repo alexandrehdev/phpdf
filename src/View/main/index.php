@@ -29,9 +29,6 @@ if (isset($_POST['btn'])) {
 		</div>
 	</header>
 	<main>
-		<!-- <div class="content-title">
-			<h1>Crie seu PDF</h1>
-		</div> -->
 		<div class="form-content">
 			<form method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">
 				<div>

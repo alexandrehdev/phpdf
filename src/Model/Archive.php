@@ -16,9 +16,9 @@ class Archive extends ArchiveController
 
 	public function generatePDF(){
 		$this->pdf->AddPage();
-		$this->pdf->SetFont('Arial','B',16);
-		$this->pdf->Cell(40,10, $this->getTitle());
-		$this->pdf->Cell(10,30, $this->getContent());
+		$this->pdf->SetFont('Arial','B',15);
+		$this->pdf->Cell(30,10, $this->getTitle(), 0, 1, 'C');
+		$this->pdf->Text(1,50, $this->getContent());
 		$this->pdf->Output();
 	}
 
